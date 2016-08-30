@@ -1,0 +1,77 @@
+PODS:
+  - Alamofire (3.4.1)
+  - AlamofireNetworkActivityIndicator (1.0.1):
+    - Alamofire (~> 3.3)
+  - APIClient (0.3.1):
+    - Alamofire (~> 3.0)
+  - CoreDataExtensions (0.3.4)
+  - CryptoSwift (0.4.1)
+  - DataSources (0.2.3)
+  - FLAnimatedImage (1.0.12)
+  - JSONWebToken (1.5.0):
+    - CryptoSwift (~> 0.4.0)
+  - Nocilla (0.10.0)
+  - PINCache (2.3)
+  - PINRemoteImage (2.1.4):
+    - PINRemoteImage/FLAnimatedImage (= 2.1.4)
+  - PINRemoteImage/Core (2.1.4):
+    - PINCache (>= 2.1)
+  - PINRemoteImage/FLAnimatedImage (2.1.4):
+    - FLAnimatedImage (>= 1.0)
+    - PINRemoteImage/Core
+  - RxSwift (2.6.0)
+
+DEPENDENCIES:
+  - AlamofireNetworkActivityIndicator (~> 1.0)
+  - APIClient (from `https://git.nerderylabs.com/SIERRA.iOS.AlamofireAPIClient`, branch `develop`)
+  - CoreDataExtensions (from `https://git.nerderylabs.com/SIERRA.iOS.CoreDataExtensions`, branch `develop`)
+  - DataSources (from `https://git.nerderylabs.com/SIERRA.iOS.DataSources`, branch `develop`)
+  - JSONWebToken (~> 1.4)
+  - Nocilla (from `https://github.com/mark-randall/Nocilla`)
+  - PINRemoteImage
+  - RxSwift (~> 2.0)
+
+EXTERNAL SOURCES:
+  APIClient:
+    :branch: develop
+    :git: https://git.nerderylabs.com/SIERRA.iOS.AlamofireAPIClient
+  CoreDataExtensions:
+    :branch: develop
+    :git: https://git.nerderylabs.com/SIERRA.iOS.CoreDataExtensions
+  DataSources:
+    :branch: develop
+    :git: https://git.nerderylabs.com/SIERRA.iOS.DataSources
+  Nocilla:
+    :git: https://github.com/mark-randall/Nocilla
+
+CHECKOUT OPTIONS:
+  APIClient:
+    :commit: af1a5266c125370909403bbd4f2d37d3e9a44576
+    :git: https://git.nerderylabs.com/SIERRA.iOS.AlamofireAPIClient
+  CoreDataExtensions:
+    :commit: 9f65d387c4461ecd9c387d9e78ef14e2121e264b
+    :git: https://git.nerderylabs.com/SIERRA.iOS.CoreDataExtensions
+  DataSources:
+    :commit: eda58b0e8db3df1d73c7b57b023b133085bbed16
+    :git: https://git.nerderylabs.com/SIERRA.iOS.DataSources
+  Nocilla:
+    :commit: 009d794b22127778d3f8eb6fc273588dba7e07d0
+    :git: https://github.com/mark-randall/Nocilla
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  AlamofireNetworkActivityIndicator: 49a6e39afb947136f7b1872bae2d684957c26697
+  APIClient: 233c8cfc3e238734e64ccc67461c3f2ffc09646e
+  CoreDataExtensions: 9eb2f4f32639a65e5ef0d6269f40cf5642e4ad22
+  CryptoSwift: 25b5aff3f260967391f8fff2e9abe4254d2c6fd5
+  DataSources: 00dda6b726776b9304161986f9312cc0f5d035fe
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  JSONWebToken: 6c8968ace6b60b2e6156a7bbe5019fd9b5ff9b5a
+  Nocilla: d397cb5aa9dd4f13e57a37030f14f66a5b5775aa
+  PINCache: ce36ed282031b92fc7733ffe831f474ff80fddc2
+  PINRemoteImage: 4ac4011c5caefd6befd99758e09becede05d3226
+  RxSwift: 77f3a0b15324baa7a1c9bfa9f199648a82424e26
+
+PODFILE CHECKSUM: 81f774b30825fced68a260576b0d9be003282b9e
+
+COCOAPODS: 1.0.1
