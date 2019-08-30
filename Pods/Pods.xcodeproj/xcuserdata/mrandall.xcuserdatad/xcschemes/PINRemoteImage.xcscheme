@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CDB08C07D47BCDB5C433A0880B4EE4C4'
-               BlueprintName = 'PINRemoteImage'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'PINRemoteImage.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9FF08A8A0AA5CC1BEB330B18DA20C97B"
+               BlueprintName = "PINRemoteImage"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "PINRemoteImage.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

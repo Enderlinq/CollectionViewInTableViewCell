@@ -1,134 +1,173 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## APIClient
-
-The MIT License (MIT)
-
-Copyright (c) 2015 mrandall
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
-## Alamofire
-
-Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
-## AlamofireNetworkActivityIndicator
-
-Copyright (c) 2016 Alamofire Software Foundation (http://alamofire.org/)
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
-## CoreDataExtensions
-
-Copyright (c) 2015 mrandall <mark@markisgood.com>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-
-## CryptoSwift
-
-Copyright (C) 2014 Marcin Krzyżanowski <marcin.krzyzanowski@gmail.com>
-This software is provided 'as-is', without any express or implied warranty. 
-
-In no event will the authors be held liable for any damages arising from the use of this software. 
-
-Permission is granted to anyone to use this software for any purpose,including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
-
-- The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation is required.
-- Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
-- This notice may not be removed or altered from any source or binary distribution.
-
 ## DataSources
 
-Copyright (c) 2015 mrandall <mark@markisgood.com>
+Nerdery License, version 1.0 (“NL 1.0”)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+1.    Definitions. Capitalized terms have the meanings set forth or referred
+to in Section 1:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+“Affiliate” of a Person means any other Person that directly or indirectly,
+through one or more intermediaries, controls, is controlled by, or is under
+common control with, such Person. The term “control” (including the terms
+“controlled by” and “under common control with”) means the direct or indirect
+power to direct or cause the direction of the management and policies of a
+Person.
+“Authorized User” means each of the individuals authorized to use the Licensed
+Software pursuant to Section 2 and the other terms and conditions of this
+Agreement.
+“Documentation” means any and all manuals, instructions and other documents and
+materials that Licensor provides or makes available to Licensee in any form or
+medium which describe the functionality, components, features or requirements
+of the Licensed Software, including any aspect of the installation,
+configuration, integration, operation, use, support or maintenance thereof.
+“Intellectual Property Rights” means any and all registered and unregistered
+rights granted, applied for or otherwise now or hereafter in existence under or
+related to any patent, copyright, trademark, trade secret, database protection
+or other intellectual property rights laws, and all similar or equivalent
+rights or forms of protection, in any part of the world.
+“License” refers to this “Nerdery License”.
+“Licensed Software” means the source code to which Licensor has attached the
+notice in Exhibit A.
+“Licensee” means the Person to whom this License has been provided.
+“Licensor” is the Nerdery, LLC and its Affiliates.
+“New Version” means any new version of the Licensed Software that Licensor may
+from time to time introduce, and which Licensor may make available to Licensee
+at an additional cost under a separate written agreement.
+“Permitted Use” means use of the Licensed Software by an Authorized User to the
+extent the Licensed Software is embedded in a Deliverable or is necessary for
+an Authorized User to receive the benefit of the Deliverable.
+“Person” means an individual, corporation, partnership, joint venture, limited
+liability entity, governmental authority, unincorporated organization, trust,
+association or other entity.
+“Representatives” means, with respect to a Party, that Party’s and its
+Affiliates’ employees, officers, directors, agents, independent contractors,
+service providers, sublicensees, subcontractors and legal advisors.
+“Transfer” means the authorized and actual handover of the Licensed Software
+from the Licensor to the Licensee, or from a Licensee to another Licensee.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+2.    License Grants and Conditions.
+
+2.1    Grant. Subject to the terms and conditions of this Agreement,
+and conditioned on Licensee’s and its Authorized Users’ compliance
+therewith, Licensor hereby grants to Licensee a nonexclusive,
+transferable, irrevocable, royalty-free, fully paid up right and
+license to use, copy, modify, and prepare derivative works of the
+Licensed Software and Documentation.
+
+2.2    Transfer of License. Any transfer of the Licensed Software and
+Documentation pursuant to Section 2.1 must be under the terms of this
+License.  Licensee must inform recipients that the Licensed Software
+and Documentation is governed by the terms of this License, and how
+they can obtain a copy of this License. A Licensee may not attempt to
+alter or restrict the recipients’ rights in the Licensed Software and
+Documentation.
+
+2.3    Effective Date. The License granted in Section 2.1 becomes
+effective on the first date the Licensor / Licensee Transfers the
+Licensed Software.
+
+2.4    Limitations on Grant Scope. The licenses granted in this
+Section 2 are the only rights granted under this license. No additional
+rights or licenses will be implied from the distribution or licensing
+of Licensed Software under this License. Except as this License
+expressly permits, Licensee shall not, and shall not permit any other
+Person to:
+
+(a)    remove, delete, efface, alter, obscure, translate,
+combine, supplement or otherwise change any trademarks, terms
+of the Documentation, disclaimers, or Intellectual Property
+Rights, proprietary rights or other symbols, notices, marks or
+serial numbers on or relating to any copy of the Licensed
+Software or Documentation;
+
+(b)    use the Licensed Software in any manner or for any
+purpose that infringes, misappropriates or otherwise violates
+any Intellectual Property Right or other right of any Person,
+or that violates any applicable Law; or
+
+(c)    use the trademarks, service marks, or logos of
+Licensor, unless the Licensor has agreed otherwise in a
+separate agreement.
+
+3.    Intellectual Property Rights.
+
+3.1    Intellectual Property Ownership. Licensee acknowledges and
+agrees that:
+
+(a)    the Licensed Software and Documentation are licensed,
+not sold, to Licensee by Licensor and Licensee does not and
+will not have or acquire under or in connection with this
+Agreement any ownership interest in the Licensed Software or
+Documentation, or in any related Intellectual Property Rights;
+
+(b)    Licensor is and will remain the sole and exclusive
+owner of all right, title and interest in and to the Licensed
+Software and Documentation, including all Intellectual Property
+Rights relating thereto, subject only to the limited license
+granted to Licensee under this Agreement; and
+
+(c)    Licensee hereby unconditionally and irrevocably assigns
+to Licensor or Licensor’s designee, its entire right, title and
+interest in and to any Intellectual Property Rights that
+Licensee may now or hereafter have in or relating to the
+Licensed Software or Documentation (including any rights in
+derivative works or patent improvements relating to either of
+them), whether held or acquired by operation of law, contract,
+assignment or otherwise.
+
+3.2    No Implied Rights. Except for the limited rights and licenses
+expressly granted under this Agreement, nothing in this Agreement
+grants, by implication, waiver, estoppel or otherwise, to Licensee or
+any third party any Intellectual Property Rights or other
+
+4.    Disclaimer of Warranty. UNLESS THE PARTIES EXPRESSLY AGREE OTHERWISE,
+ALL LICENSED SOFTWARE AND DOCUMENTATION PROVIDED BY LICENSOR ARE PROVIDED “AS
+IS.” LICENSOR HEREBY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED,
+STATUTORY OR OTHER (INCLUDING ALL WARRANTIES ARISING FROM COURSE OF DEALING,
+USAGE OR TRADE PRACTICE), AND SPECIFICALLY DISCLAIMS ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND TITLE.
+
+5.    Limitations of Liability. UNLESS THE PARTIES EXPRESSLY AGREE OTHERWISE,
+IN NO EVENT WILL EITHER PARTY OR ITS AGENTS, OFFICERS, DIRECTORS, EMPLOYEES,
+SUCCESSORS, ASSIGNS, OR AFFILIATES BE LIABLE TO THE OTHER PARTY OR ANY OTHER
+PERSON FOR ANY INDIRECT, INCIDENTAL, CONSEQUENTIAL, PUNITIVE, OR OTHER SPECIAL
+DAMAGES, INCLUDING, BUT NOT LIMITED TO, LOST PROFITS, LOSS OF DATA, LOST TIME,
+LOST SAVINGS, LOST CONFIDENTIAL OR OTHER INFORMATION, BUSINESS INTERRUPTION, OR
+FOR ANY MATTER ARISING FROM OR RELATING TO THESE TERMS EVEN IF THE PARTY HAS
+BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS OR DAMAGE.
+
+6.    Notices. You may not remove or alter the substance of any license
+notices (including copyright notices, patent notices, disclaimers of warranty,
+or limitations of liability) contained within the Source Code Form of the
+Covered Software, except that You may alter any license notices to the extent
+required to remedy known factual inaccuracies.
+
+7.    Miscellaneous. This License, together with any terms and conditions to
+which Licensor and Licensee have previously agreed, including, but not limited
+to, a Master Service Agreement or the terms and conditions listed at
+Nerdery.com/terms (collectively, the “Terms”) constitutes the sole and entire
+agreement of the parties with respect to the Licensed Software and supersedes
+all prior and contemporaneous understandings, agreements, representations and
+warranties, both written and oral, with respect to such subject matter. In the
+event of any inconsistency between the License and the Terms, the Terms will
+take precedence. If any provision of this License is held to be unenforceable,
+such provision shall be reformed only to the extent necessary to make it
+enforceable.
+
+
+Exhibit A - Source Code Form License Notice
+
+This Source Code Form is subject to the terms of the Nerdery License, v. 1.0
+(“NL”). If a copy of the NL 1.0 was not distributed with this file, it can be
+obtained at
+https://raw.githubusercontent.com/thenerdery/nerdery_license/master/License.txt.
+
+If it is not possible or desirable to put the notice in a particular file, then
+Licensee may include the notice in a location (such as a LICENSE file in a
+relevant directory) where it would reasonably be expected to be found.  You may
+add additional accurate notices of copyright ownership.
 
 
 ## FLAnimatedImage
@@ -155,58 +194,6 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-
-## JSONWebToken
-
-Copyright (c) 2015, Kyle Fuller
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
-
-
-## Nocilla
-
-Copyright (c) 2012 Luis Solano Bonet
-MIT License
-
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:
-
-The above copyright notice and this permission notice shall be
-included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## PINCache
 

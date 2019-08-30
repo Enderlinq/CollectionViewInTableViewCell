@@ -4,47 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>APIClient.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Alamofire.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>AlamofireNetworkActivityIndicator.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>CoreDataExtensions.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>CryptoSwift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>DataSources.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>FLAnimatedImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>JSONWebToken.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Nocilla.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -71,72 +36,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1EC1A8F654BCB7A6A92B0B8A63B84F0A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>228FFC4E78F899B58C33C57F31513A8E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>34C073D448A23CA3A97EA55CC489BD6F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>393E0E1A41299C44C63DBB766A243010</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>73A5535D0CE110D2F409284CC5CE551A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7DD45B459578C2E3BD69C2B5A23797D7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>90C7204433C093B22C6DB3676E135D4C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CDB08C07D47BCDB5C433A0880B4EE4C4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0B2813F56920F3EE44496019751600B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E9C2441A77AAC22D3994F1725D95BF18</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F5B9D937B08E325BC3AB3599B6E5D6E9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FE113CEF81C16AA59EC049ACE130BCB2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

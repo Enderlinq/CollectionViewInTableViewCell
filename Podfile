@@ -1,38 +1,19 @@
-platform :ios, '9.0'
-
+platform :ios, '12.0'
+source 'https://git.nerdery.com/scm/bravo/ios.nerderypods.git'
 source 'https://github.com/CocoaPods/Specs.git'
-source 'https://git.nerderylabs.com/BRAVO.iOS.NerderyPods'
 
 use_frameworks!
 
 target 'NetflixPOC' do
 
-# HTTP Mocking
-# DEVELOPMENT && TESTING ONLY !!!
-pod "Nocilla", :git => 'https://github.com/mark-randall/Nocilla'
-
-# APIClient using AlamoFire
-pod "APIClient", :git => 'https://git.nerderylabs.com/SIERRA.iOS.AlamofireAPIClient', :branch => 'develop'
-
-# Statusbar ActivityIndicator for AlamoFire
-pod 'AlamofireNetworkActivityIndicator', '~> 1.0'
-
 # UITableViewDataSource abstraction
-pod "DataSources", :git => 'https://git.nerderylabs.com/SIERRA.iOS.DataSources', :branch => 'develop'
-
-# JSON to NSManagedObject model deserialization
-pod "CoreDataExtensions", :git => 'https://git.nerderylabs.com/SIERRA.iOS.CoreDataExtensions', :branch => 'develop'
+pod 'DataSources', :git => 'https://git.nerdery.com/scm/sierra/ios.datasources.git'
 
 # MVVM Data Binding
-pod 'RxSwift',    '~> 2.0'
-
-# JWT for API Authentication
-pod 'JSONWebToken', '~>1.4'
+pod 'RxSwift', '~>4.0'
 
 # Image Downloading and Caching
 pod 'PINRemoteImage'
-
-pod 'google-cast-sdk'
 
 end
 

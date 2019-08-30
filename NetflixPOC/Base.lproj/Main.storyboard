@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BsQ-Qq-aWe">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BsQ-Qq-aWe">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -10,9 +14,9 @@
             <objects>
                 <tableViewController id="PQg-g6-ivQ" customClass="FeaturedContentViewController" customModule="NetflixPOC" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="nID-9z-6pk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
                             <outlet property="dataSource" destination="PQg-g6-ivQ" id="0x7-ax-TED"/>
                             <outlet property="delegate" destination="PQg-g6-ivQ" id="SRU-qU-Dff"/>
@@ -25,15 +29,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgY-sb-UQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398.5" y="120.5"/>
+            <point key="canvasLocation" x="314" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8XT-zG-YEO">
             <objects>
                 <navigationController id="aon-lu-IsP" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="NC0-8a-oFX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -42,39 +45,42 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OUG-6d-qoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.5" y="120.5"/>
+            <point key="canvasLocation" x="1151" y="120"/>
         </scene>
         <!--Video Detail View Controller-->
         <scene sceneID="oby-sH-d3h">
             <objects>
-                <viewController id="hIL-ge-GeX" customClass="VideoDetailViewController" customModule="NetflixPOC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="hIL-ge-GeX" customClass="VideoDetailViewController" customModule="NetflixPOC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NSL-Gl-ajk"/>
                         <viewControllerLayoutGuide type="bottom" id="xyG-TO-bw7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xNO-Lq-edV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="klS-c5-n5o">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="klS-c5-n5o">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="xyG-TO-bw7" firstAttribute="top" secondItem="klS-c5-n5o" secondAttribute="bottom" id="FZu-0H-Cs9"/>
+                            <constraint firstAttribute="bottom" secondItem="klS-c5-n5o" secondAttribute="bottom" id="FZu-0H-Cs9"/>
                             <constraint firstAttribute="trailing" secondItem="klS-c5-n5o" secondAttribute="trailing" id="Ieq-qN-HDD"/>
                             <constraint firstItem="klS-c5-n5o" firstAttribute="leading" secondItem="xNO-Lq-edV" secondAttribute="leading" id="uiM-34-Boj"/>
-                            <constraint firstItem="klS-c5-n5o" firstAttribute="top" secondItem="NSL-Gl-ajk" secondAttribute="bottom" id="vn4-zi-egB"/>
+                            <constraint firstItem="klS-c5-n5o" firstAttribute="top" secondItem="xNO-Lq-edV" secondAttribute="top" id="vn4-zi-egB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oEN-gY-zPY">
-                        <barButtonItem key="leftBarButtonItem" title="X" id="F3u-XO-SWV">
+                        <barButtonItem key="rightBarButtonItem" title="X" id="F3u-XO-SWV">
                             <connections>
-                                <segue destination="zX1-eX-G2X" kind="unwind" unwindAction="unwindFromVideoDetail:" id="gA1-jE-AsV"/>
+                                <segue destination="zX1-eX-G2X" kind="unwind" unwindAction="unwindFromVideoDetailWithSender:" id="XYV-5F-QsF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="posterImageView" destination="klS-c5-n5o" id="Hrh-33-BOz"/>
                     </connections>
@@ -82,15 +88,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pH2-41-I9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zX1-eX-G2X" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1356.5" y="120.5"/>
+            <point key="canvasLocation" x="1151" y="893"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bW7-jt-R7n">
             <objects>
                 <navigationController id="BsQ-Qq-aWe" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Ij-uF-BCY">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -99,7 +104,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LDi-eK-cHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-112" y="121"/>
+            <point key="canvasLocation" x="-462" y="120"/>
         </scene>
     </scenes>
 </document>

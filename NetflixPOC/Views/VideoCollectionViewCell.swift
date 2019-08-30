@@ -9,42 +9,25 @@
 import UIKit
 import PINRemoteImage
 
-final class VideoCollectionViewCell: UICollectionViewCell {
+final class VideoCollectionViewCell: UICollectionViewCell, RxDataSourceCell {
 
+    static var reuseIdentifier = "VideoCollectionViewCell"
+
+    // MARK: - Subviews
     
-    //MARK: - ViewModel
+    @IBOutlet private var posterImageView: UIImageView!
     
-    var viewModel: IVideoViewModel? {
-        didSet {
-            bindViewModel()
-        }
-    }
-    
-    
-    //MARK: - Subviews
-    
-    @IBOutlet private var posterImageView: UIImageView! {
-        didSet {
-            posterImageView.pin_updateWithProgress = true
-        }
-    }
-    
-    
-    //MARK: - UICollectionViewCell Lifecycle
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
+    // MARK: - UICollectionViewCell Lifecycle
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        posterImageView.pin_cancelImageDownload()
         posterImageView.image = nil
     }
     
+    // MARK: - Bind ViewModel
     
-    //MARK: - Bind ViewModel
-    
-    private func bindViewModel() {
-        posterImageView.pin_setImageFromURL(viewModel?.posterURL)
+    func bind(viewModel: VideoCellData) {
+        posterImageView.pin_setImage(from: viewModel.videoPosterImageURL)
     }
 }

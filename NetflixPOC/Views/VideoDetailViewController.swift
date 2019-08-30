@@ -8,39 +8,39 @@
 
 import UIKit
 import PINRemoteImage
+import RxSwift
 
 final class VideoDetailViewController: UIViewController {
 
+    private var viewModel: VideoDetailViewModelProtocol?
+    private var disposeBag = DisposeBag()
     
-    //MARK: - ViewModel
+    // MARK: - Subviews
     
-    var viewModel: VideoViewModel?
-    
-    
-    //MARK: - Subviews
-    
-    @IBOutlet private var posterImageView: UIImageView! {
-        didSet {
-            posterImageView.pin_updateWithProgress = true
-        }
-    }
-    
-    
-    //MARK: - UIViewController Lifecycle
+    @IBOutlet private var posterImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        defer {
-            bindViewModel()
+        // Incase view wasn't loaded when bind was called
+        // TODO: improve. Results in binding twice
+        if let viewModel = self.viewModel {
+            bind(viewModel: viewModel)
         }
     }
-
     
-    //MARK: - Bind ViewModel
+    // MARK: - Bind ViewModel
     
-    private func bindViewModel() {
-
-        posterImageView.pin_setImageFromURL(viewModel?.posterURL)
+    func bind(viewModel: VideoDetailViewModelProtocol) {
+        
+        self.viewModel = viewModel
+        
+        guard viewIfLoaded != nil else { return }
+        
+        disposeBag = DisposeBag()
+        
+        viewModel.viewState.subscribe(onNext: { [weak self] viewState in
+            self?.posterImageView.pin_setImage(from: viewState)
+        }).disposed(by: disposeBag)
     }
 }

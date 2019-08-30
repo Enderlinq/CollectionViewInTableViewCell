@@ -14,108 +14,94 @@ private struct Segue {
     static let ShowVideoDetail = "ShowVideoDetail"
 }
 
-public struct FeaturedContentTableViewCellIdentifiers {
-    static let CategoryCell = "ContentCategoryTableViewCell"
-    static let VideoCell = "VideoCollectionViewCell"
-}
-
 final class FeaturedContentViewController: UITableViewController {
     
-    
-    //MARK: - ViewModel
-    
+    lazy var viewModel: FeaturedVideosViewModelProtocol = FeaturedVideosViewModel()
     private let disposeBag = DisposeBag()
+
+    private var dataSource: RxDataSource<VideoCategoryViewModelProtocol, VideoCategoryTableViewCell>?
     
-    //TODO: Create elsewhere in the future / inject
-    lazy var viewModel: IFeaturedVideosViewModel = FeaturedVideosViewModel()
+    // Frame of seleced cell
+    // Frame transition is expanding from
+    private var lastFrameTappedToShowViewDetail: CGRect?
     
-    
-    //MARK: - DataSource
-    
-    private var dataSource: UITableViewDataSource?
-    
-    
-    //MARK: - UIViewController Lifecycle
+    // MARK: - UIViewController Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        defer {
-            bindViewModel()
-        }
+        defer { bindViewModel() }
         
-        //configure UITableView
-        tableView.registerNib(UINib(nibName: "VideoCategoryTableViewCell", bundle: nil), forCellReuseIdentifier: FeaturedContentTableViewCellIdentifiers.CategoryCell)
-        //tableView.separatorStyle = .None
-        tableView.estimatedRowHeight = 100.0
+        // configure UITableView
+        tableView.separatorStyle = .none
+        tableView.rowHeight = 160
     }
     
-    
-    //MARK: - Bind ViewModel
+    // MARK: - Bind ViewModel
 
     private func bindViewModel() {
         
-        viewModel.videoCategories.subscribeNext { [weak self] videoCategories in
- 
-            self?.dataSource = ArrayDataSource(
-                data: videoCategories,
-                cellReuseIdentifier: FeaturedContentTableViewCellIdentifiers.CategoryCell
-            ) { (cell: VideoCategoryTableViewCell, _, data: IVideoCategoryViewModel) in
-                cell.viewModel =  data
-            }
-            
-            self?.tableView.dataSource = self?.dataSource
-            self?.tableView.reloadData()
-            
-        }.addDisposableTo(disposeBag)
-        
-        viewModel.showVideoDetail.subscribeNext { [weak self] in
-            self?.performSegueWithIdentifier(Segue.ShowVideoDetail, sender: $0 as? AnyObject)
-        }.addDisposableTo(disposeBag)
+        dataSource = tableView.create(observable: viewModel.viewState)
+
+        viewModel.showVideoDetail.subscribe(onNext: { [weak self] in
+            self?.performSegue(withIdentifier: Segue.ShowVideoDetail, sender: $0)
+        }).disposed(by: disposeBag)
     }
     
+    // MARK: - Navigation
     
-    //MARK: - Navigation
+    @IBAction private func unwindFromVideoDetail(sender: UIStoryboardSegue) {
+    }
     
-    @IBAction private func unwindFromVideoDetail(sender: UIStoryboardSegue) {}
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == Segue.ShowVideoDetail {
             
             guard
-                let viewModel = sender as? VideoViewModel,
-                let nc = segue.destinationViewController as? UINavigationController,
+                let viewModelAndFrame = sender as? (VideoDetailViewModelProtocol, CGRect),
+                let nc = segue.destination as? UINavigationController,
                 let vc = nc.topViewController as? VideoDetailViewController
-            else {
-                assertionFailure("Segue 'ShowVideoDetail' is not properly configured")
-                return
+                else {
+                    assertionFailure("Segue 'ShowVideoDetail' is not properly configured")
+                    return
             }
+
+            vc.bind(viewModel: viewModelAndFrame.0)
             
+            // Set for custom UIViewControllerAnimatedTransitioning
             nc.transitioningDelegate = self
-            nc.modalPresentationStyle = .Custom
-            vc.viewModel = viewModel
+            
+            // Transition doesn't work with .formSheet for some reason
+            // Getting this to work with modalPresentationStyle = .custom may be desired
+            // nc.modalPresentationStyle = .formSheet
+            
+            // Set for custom UIPresentationController
+            nc.modalPresentationStyle = .custom
+            nc.navigationBar.clipsToBounds = true
+            nc.preferredContentSize = view.bounds.insetBy(dx: 80, dy: 80).size
+            lastFrameTappedToShowViewDetail = viewModelAndFrame.1
+            
         }
     }
 }
 
-
-//MARK: - UIViewControllerTransitioningDelegate
+// MARK: - UIViewControllerTransitioningDelegate
 
 extension FeaturedContentViewController: UIViewControllerTransitioningDelegate {
     
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        let frame = viewModel.lastFrameTappedToShowViewDetail ?? CGRectZero
-        return ExpandVideoTransition(presentingControlFrame: frame)
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let frame = lastFrameTappedToShowViewDetail ?? .zero
+        return ExpandTransition(presentingControlFrame: frame)
     }
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return ExpandVideoTransition(presenting: false)
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return ExpandTransition(presenting: false)
     }
     
-    func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
-        let presentationController = ModalPresentationController(presentedViewController: presented, presentingViewController: presenting)
-        presentationController.layout = .UpperRight
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+        let presentationController = ModalPresentationController(presentedViewController: presented, presenting: presenting)
+        presentationController.layout = .center
+        presentationController.chromeView.backgroundColor = .yellow
         return presentationController
     }
 }

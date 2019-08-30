@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FE113CEF81C16AA59EC049ACE130BCB2'
-               BlueprintName = 'FLAnimatedImage'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FLAnimatedImage.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "4D7B7D274050D6277CAECA96F3CF6722"
+               BlueprintName = "FLAnimatedImage"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "FLAnimatedImage.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

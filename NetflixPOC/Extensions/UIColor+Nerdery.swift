@@ -14,7 +14,7 @@ public extension UIColor {
     /// ```
     /// - Parameter rgbHex: Hex value
     /// - Returns: An initialized color object
-    public convenience init(_ rgbHex: UInt) {
+    convenience init(_ rgbHex: UInt) {
         self.init(rgbHex, alpha: 1.0)
     }
 
@@ -27,7 +27,7 @@ public extension UIColor {
     /// - Parameter rgbHex: Hex value
     /// - Parameter alpha: The opacity value of the color object, specified as a value from 0.0 to 1.0.
     /// - Returns: An initialized color object
-    public convenience init(_ rgbHex: UInt, alpha: CGFloat) {
+    convenience init(_ rgbHex: UInt, alpha: CGFloat) {
         let rawRed = CGFloat((rgbHex >> 16) & 0xFF) / 255.0
         let rawGreen = CGFloat((rgbHex >> 8) & 0xFF) / 255.0
         let rawBlue = CGFloat(rgbHex & 0xFF) / 255.0

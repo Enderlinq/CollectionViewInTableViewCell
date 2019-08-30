@@ -10,125 +10,69 @@ import UIKit
 import RxSwift
 import DataSources
 
-final class VideoCategoryTableViewCell: UITableViewCell {
-
+final class VideoCategoryTableViewCell: UITableViewCell, RxDataSourceCell {
     
-    //MARK: - ViewModel
+    static var reuseIdentifier = "VideoCategoryTableViewCell"
     
-    var viewModel: IVideoCategoryViewModel? {
-        didSet {
-            bindViewModel()
-        }
-    }
-    
+    private var viewModel: VideoCategoryViewModelProtocol?
     private var disposeBag = DisposeBag()
     
+    // MARK: - DataSource
     
-    //MARK: - DataSource
+    private var dataSource: RxDataSource<VideoCellData, VideoCollectionViewCell>?
     
-    private var dataSource: UICollectionViewDataSource?
-    
-    
-    //MARK: - Layout
-    
-    var videoItemSize: CGSize = CGSize(width: 100.0, height: 100.0)
-    var videoItemMargin = 10.0
-    
-    
-    //MARK: - Subviews
+    // MARK: - Subviews
     
     @IBOutlet private var titleLabel: UILabel!
     
     @IBOutlet private var collectionView: UICollectionView! {
         didSet {
-            collectionView.registerNib(UINib(nibName: "VideoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: FeaturedContentTableViewCellIdentifiers.VideoCell)
-            collectionView.backgroundColor = UIColor.whiteColor()
+            collectionView.backgroundColor = .white
             collectionView?.delegate = self
+            (collectionView.collectionViewLayout as? UICollectionViewFlowLayout)?.scrollDirection = .horizontal
         }
     }
     
-    
-    //MARK: - UITableViewCell Lifecycle
+    // MARK: - UITableViewCell Lifecycle
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        defer {
-            bindViewModel()
-        }
-        
-        selectionStyle = .None
+        selectionStyle = .none
     }
     
-    override func prepareForReuse() {
-        super.prepareForReuse()
+    // MARK: - Bind ViewModel
         
-        //re-set disposebag to nil existing bag to dispose existing disposibles / bindings
+    func bind(viewModel: VideoCategoryViewModelProtocol) {
+    
+        self.viewModel = viewModel
+    
+        // Dispose last binding. e.g. cell is being re-used
         disposeBag = DisposeBag()
-    }
-    
-    override func updateConstraints() {
-        super.updateConstraints()
+                
+        // Imagine this makes sense because a single TableViewCell could update
+        // Also imagine a world where the dataSource.data updates the table without reloading
+        viewModel.viewState.subscribe(onNext: { [weak self] viewState in
+            self?.titleLabel.text = viewState.0
+        }).disposed(by: disposeBag)
         
-        collectionView?.heightAnchor.constraintEqualToConstant(videoItemSize.height + CGFloat(videoItemMargin * 2.0)).active = true
-        
-        if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.itemSize =  videoItemSize
-            layout.scrollDirection = .Horizontal
-            layout.minimumInteritemSpacing = CGFloat(videoItemMargin)
-            layout.sectionInset = UIEdgeInsets(
-                top: CGFloat(videoItemMargin / 2.0),
-                left: CGFloat(videoItemMargin),
-                bottom: CGFloat(videoItemMargin / 2.0),
-                right: CGFloat(videoItemMargin)
-            )
-        }
-    }
-    
-    
-    //MARK: - Bind ViewModel
-        
-    private func bindViewModel() {
-    
-        guard let viewModel = self.viewModel else {
-            return
-        }
-        
-        viewModel.title.subscribeNext { [weak self] title in
-            self?.titleLabel.text = title
-        }.addDisposableTo(disposeBag)
-        
-        viewModel.videos.subscribeNext { [weak self] videos in
-            
-            self?.dataSource = ArrayDataSource(
-                data: videos,
-                cellReuseIdentifier: FeaturedContentTableViewCellIdentifiers.VideoCell
-            ) { (cell: VideoCollectionViewCell, _, data: IVideoViewModel) in
-                cell.viewModel =  data
-            }
-            
-            self?.collectionView.dataSource = self?.dataSource
-            self?.collectionView.reloadData()
-            
-        }.addDisposableTo(disposeBag)
+        dataSource = collectionView.create(observable: viewModel.viewState.map({ $0.1 }))
     }
 }
 
-
-//MARK: - UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 
 extension VideoCategoryTableViewCell: UICollectionViewDelegate {
     
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        //get frame
-        let attributes = collectionView.layoutAttributesForItemAtIndexPath(indexPath)
-        var frame = attributes?.frame ?? CGRectZero
+        // get frame
+        let attributes = collectionView.layoutAttributesForItem(at: indexPath)
+        var frame = attributes?.frame ?? .zero
         
-        //convert frame to superview coord ctx
-        let cell = collectionView.cellForItemAtIndexPath(indexPath)
-        frame = cell?.superview?.convertRect(frame, toView: nil) ?? CGRectZero
+        // convert frame to superview coord ctx
+        let cell = collectionView.cellForItem(at: indexPath)
+        frame = cell?.superview?.convert(frame, to: nil) ?? .zero
         
-        viewModel?.videoSelected(withIndex: indexPath.row, tappedFrame: frame ?? CGRectZero)
+        viewModel?.videoSelected(withIndex: indexPath.row, tappedFrame: frame)
     }
 }
