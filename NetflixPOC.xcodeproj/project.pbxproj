@@ -21,6 +21,8 @@
 		022DA9F523196A0700D03F73 /* VideoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022DA9F423196A0700D03F73 /* VideoDetailViewModel.swift */; };
 		022DA9F823196A8000D03F73 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022DA9F723196A8000D03F73 /* Video.swift */; };
 		022DA9FB231990C700D03F73 /* RxDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022DA9FA231990C700D03F73 /* RxDataSource.swift */; };
+		025064E92319A39C00BF86CC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 025064E82319A39C00BF86CC /* README.md */; };
+		025064EB2319AEC500BF86CC /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025064EA2319AEC500BF86CC /* CustomTransition.swift */; };
 		029903B51D70914600A3B5F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029903B41D70914600A3B5F6 /* AppDelegate.swift */; };
 		029903BA1D70914600A3B5F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029903B81D70914600A3B5F6 /* Main.storyboard */; };
 		029903BC1D70914600A3B5F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029903BB1D70914600A3B5F6 /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		022DA9F423196A0700D03F73 /* VideoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailViewModel.swift; sourceTree = "<group>"; };
 		022DA9F723196A8000D03F73 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		022DA9FA231990C700D03F73 /* RxDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxDataSource.swift; sourceTree = "<group>"; };
+		025064E82319A39C00BF86CC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		025064EA2319AEC500BF86CC /* CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		029903B11D70914600A3B5F6 /* NetflixPOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetflixPOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029903B41D70914600A3B5F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		029903B91D70914600A3B5F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			children = (
 				020D67E21D71FE53002F3650 /* ExpandTransition.swift */,
 				020D67E31D71FE53002F3650 /* ModalPresentationController.swift */,
+				025064EA2319AEC500BF86CC /* CustomTransition.swift */,
 			);
 			path = Transitions;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 		029903A81D70914600A3B5F6 = {
 			isa = PBXGroup;
 			children = (
+				025064E82319A39C00BF86CC /* README.md */,
 				029903B31D70914600A3B5F6 /* NetflixPOC */,
 				029903B21D70914600A3B5F6 /* Products */,
 				1BF4B8E4D6D637F023FA4FE6 /* Pods */,
@@ -236,6 +242,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				025064E92319A39C00BF86CC /* README.md in Resources */,
 				029903BF1D70914600A3B5F6 /* LaunchScreen.storyboard in Resources */,
 				029903BC1D70914600A3B5F6 /* Assets.xcassets in Resources */,
 				020D67F31D71FE53002F3650 /* VideoCollectionViewCell.xib in Resources */,
@@ -299,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				020D67F61D71FE53002F3650 /* FeaturedVideosViewModel.swift in Sources */,
+				025064EB2319AEC500BF86CC /* CustomTransition.swift in Sources */,
 				022DA9FB231990C700D03F73 /* RxDataSource.swift in Sources */,
 				022DA9F823196A8000D03F73 /* Video.swift in Sources */,
 				020D67F21D71FE53002F3650 /* VideoCollectionViewCell.swift in Sources */,

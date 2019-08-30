@@ -77,10 +77,16 @@ final class FeaturedContentViewController: UITableViewController {
             
             // Set for custom UIPresentationController
             nc.modalPresentationStyle = .custom
-            nc.navigationBar.clipsToBounds = true
-            nc.preferredContentSize = view.bounds.insetBy(dx: 80, dy: 80).size
-            lastFrameTappedToShowViewDetail = viewModelAndFrame.1
+            //nc.navigationBar.clipsToBounds = true // Maybe a better solve for this
             
+            // This .formsheet cheat is not working for CustomTransform.
+            // Partly not respecting preferredContentSize. Partly not sure why
+            // Looks good on an iPhones with notches for now :|
+//            if self.traitCollection.horizontalSizeClass == .regular {
+//                nc.preferredContentSize = view.bounds.insetBy(dx: 80, dy: 80).size
+//            }
+            
+            lastFrameTappedToShowViewDetail = viewModelAndFrame.1
         }
     }
 }
@@ -91,7 +97,7 @@ extension FeaturedContentViewController: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         let frame = lastFrameTappedToShowViewDetail ?? .zero
-        return ExpandTransition(presentingControlFrame: frame)
+        return CustomTransition(presentingControlFrame: frame)
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -101,7 +107,6 @@ extension FeaturedContentViewController: UIViewControllerTransitioningDelegate {
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         let presentationController = ModalPresentationController(presentedViewController: presented, presenting: presenting)
         presentationController.layout = .center
-        presentationController.chromeView.backgroundColor = .yellow
         return presentationController
     }
 }

@@ -19,8 +19,16 @@ final class VideoDetailViewController: UIViewController {
     
     @IBOutlet private var posterImageView: UIImageView!
     
+    @IBOutlet private var closeButon: UIButton! {
+        didSet {
+            closeButon.layer.cornerRadius = 22
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
         
         // Incase view wasn't loaded when bind was called
         // TODO: improve. Results in binding twice
